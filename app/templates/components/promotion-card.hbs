@@ -1,0 +1,43 @@
+<div class="card-header">
+  <div class="d-flex justify-content-start">
+    <div class="align-self-center">
+      <h3>{{promotion.name}}</h3>
+    </div>
+    <div class="ml-auto">
+      <p>
+        Start date: {{moment-format promotion.startDate "DD/MM/YYYY"}}
+      </p>
+      <p>
+        {{#if promotion.endDate}}
+          End date: {{moment-format promotion.endDate "DD/MM/YYYY"}}
+        {{else}}
+          Runs indefinitely
+        {{/if}}
+      </p>
+    </div>
+  </div>
+</div>
+<div class="card-block">
+
+  <h4>Effects</h4>
+  <ul>
+    {{#if promotion.itemsPercentageDiscount}}
+      <li>
+        {{promotion.itemsPercentageDiscount}}% off items
+      </li>
+    {{/if}}
+    {{#if promotion.deliveryPercentageDiscount}}
+      <li>
+        {{promotion.deliveryPercentageDiscount}}% off delivery
+      </li>
+    {{/if}}
+  </ul>
+
+  <h4>Restrictions</h4>
+  {{#each promotion.constraints as |constraint|}}
+    {{!-- Need check type of constraint  --}}
+    Can only be redeemed once by a customer.
+  {{/each}}
+
+  {{yield}}
+</div>
