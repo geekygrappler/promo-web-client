@@ -1,5 +1,6 @@
 export default function() {
 
+  this.urlPrefix = 'http://localhost:3000';
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
@@ -25,4 +26,5 @@ export default function() {
   */
 
   this.get('/promotions');
+  this.passthrough('promotions');
 }
