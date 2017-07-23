@@ -11,7 +11,26 @@ Router.map(function() {
     this.route('draft', function() {
       this.route('name');
       this.route('dates');
-      this.route('modifiers');
+      this.route('modifiers', function() {
+        this.route('items', function() {
+          this.route('types');
+          this.route('percentage');
+          this.route('absolute');
+        });
+        this.route('delivery', function() {
+          this.route('types');
+          this.route('absolute');
+          this.route('percentage');
+        });
+        this.route('total', function() {
+          this.route('percentage');
+          this.route('absolute');
+          this.route('types');
+        });
+        this.route('targets');
+      });
+      this.route('constraints');
+      this.route('overview');
     });
   });
 });
