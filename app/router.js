@@ -7,7 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('promotions');
+  this.route('promotions', function() {
+    this.route('draft', function() {
+      this.route('name');
+      this.route('dates');
+      this.route('modifiers');
+    });
+  });
 });
 
 export default Router;
