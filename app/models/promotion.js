@@ -21,14 +21,24 @@ export default DS.Model.extend({
   addConstraint(constraint) {
     const constraints = this.get('constraints');
     if (constraints.indexOf(constraint) === -1) {
-      constraints.push(constraint);
+      constraints.pushObject(constraint);
     }
+  },
+
+  removeConstraint(constraint) {
+    const constraints = this.get('constraints');
+    constraints.removeObject(constraint);
+  },
+
+  containsConstraint(constraint) {
+    const constraints = this.get('constraints');
+    return constraints.indexOf(constraint) > -1;
   },
 
   addModifier(modifier) {
     const modifiers = this.get('modifiers');
     if (modifiers.indexOf(modifier) === -1) {
-      modifiers.push(modifier);
+      modifiers.pushObject(modifier);
     }
   }
 });

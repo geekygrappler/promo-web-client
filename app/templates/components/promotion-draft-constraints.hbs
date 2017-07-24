@@ -1,0 +1,36 @@
+<h2>What rules do you want to apply for redemption?</h2>
+
+<div class="d-flex justify-content-center">
+  <div>
+    <div class="form-check text-left">
+    <label class="form-check-label">
+      {{input
+        class="form-check-input"
+        type="checkbox"
+        checked=onePerCustomerConstraint
+        change=(action "toggleConstraint" "onePerCustomerConstraint")
+      }}
+      Only one promocode per customer
+    </label>
+  </div>
+  <div class="form-check text-left">
+    <label class="form-check-label">
+      {{input
+        class="form-check-input"
+        type="checkbox"
+        checked=specificCustomerConstraint
+        change=(action "toggleConstraint" "specificCustomerConstraint")
+      }}
+      Promocode belongs to specific customer
+    </label>
+  </div>
+  <div class="form-check text-left">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" value="">
+      Minimum Basket Total
+    </label>
+  </div>
+  </div>
+</div>
+
+{{yield}}
