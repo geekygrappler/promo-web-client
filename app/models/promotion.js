@@ -15,5 +15,20 @@ export default DS.Model.extend({
   totalAbsoluteDiscount: attr('number'),
 
   constraints: attr('array', { defaultValue: () => [] }),
-  modifiers: attr('array', { defaultValue: () => [] })
+  modifiers: attr('array', { defaultValue: () => [] }),
+
+
+  addConstraint(constraint) {
+    const constraints = this.get('constraints');
+    if (constraints.indexOf(constraint) === -1) {
+      constraints.push(constraint);
+    }
+  },
+
+  addModifier(modifier) {
+    const modifiers = this.get('modifiers');
+    if (modifiers.indexOf(modifier) === -1) {
+      modifiers.push(modifier);
+    }
+  }
 });

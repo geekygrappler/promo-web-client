@@ -1,7 +1,6 @@
 
 @import "ember-bootstrap/bootstrap";
-@import 'templates/promotions/draft';
 
-.vh-100 {
+:global(.vh-100) {
   height: 100vh;
 }
