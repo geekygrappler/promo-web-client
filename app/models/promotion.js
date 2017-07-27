@@ -14,6 +14,8 @@ export default DS.Model.extend({
   deliveryAbsoluteDiscount: attr('number'),
   totalAbsoluteDiscount: attr('number'),
 
+  minimumBasketTotal: attr('number'),
+
   constraints: attr('array', { defaultValue: () => [] }),
   modifiers: attr('array', { defaultValue: () => [] }),
 

@@ -29,7 +29,9 @@ Router.map(function() {
         });
         this.route('targets');
       });
-      this.route('constraints');
+      this.route('constraints', function() {
+        this.route('minimum-basket-total');
+      });
       this.route('overview');
     });
   });

@@ -26,11 +26,26 @@
   </div>
   <div class="form-check text-left">
     <label class="form-check-label">
-      <input class="form-check-input" type="checkbox" value="">
+      {{input
+        class="form-check-input"
+        type="checkbox"
+        checked=minimumBasketTotalConstraint
+        change=(action "toggleMinimumBasketTotalConstraint")
+      }}
       Minimum Basket Total
     </label>
+    {{#if minimumBasketTotalConstraint}}
+      :
+      {{input
+        type="text"
+        class="form-control"
+        value=promotion.minimumBasketTotal
+      }}
+    {{/if}}
   </div>
   </div>
 </div>
+{{#link-to "promotions.draft.overview" class="btn btn-primary btn-large"}}Great{{/link-to}}
+
 
 {{yield}}
