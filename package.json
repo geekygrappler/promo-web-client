@@ -15,7 +15,7 @@
     "test": "ember test"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "next",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-bootstrap": "^1.0.0-beta.2",
@@ -30,14 +30,18 @@
     "ember-cli-mirage": "^0.3.4",
     "ember-cli-moment-shim": "^3.3.3",
     "ember-cli-qunit": "^4.0.0",
+    "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-css-modules": "^0.7.2",
+    "ember-css-modules-sass": "^1.0.0",
     "ember-data": "~2.15.0-beta.1",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "^7.3.1",
     "ember-resolver": "^4.0.0",
+    "ember-route-action-helper": "^2.0.5",
     "ember-source": "~2.15.0-beta.1",
     "loader.js": "^4.2.3"
   },
