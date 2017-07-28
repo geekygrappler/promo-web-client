@@ -24,7 +24,9 @@ export default Ember.Route.extend({
   //   ]);
   // },
 
-  model() {
-    return this.store.findAll('promotion');
+  actions: {
+    savePromotion(promotion) {
+      promotion.save();
+    }
   }
 });

@@ -12,5 +12,35 @@ export default DS.Model.extend({
   /* Absolute Discounts */
   itemsAbsoluteDiscount: attr('number'),
   deliveryAbsoluteDiscount: attr('number'),
-  totalAbsoluteDiscount: attr('number')
+  totalAbsoluteDiscount: attr('number'),
+
+  minimumBasketTotal: attr('number'),
+
+  constraints: attr('', { defaultValue: () => [] }),
+  modifiers: attr('', { defaultValue: () => [] }),
+
+
+  addConstraint(constraint) {
+    const constraints = this.get('constraints');
+    if (constraints.indexOf(constraint) === -1) {
+      constraints.pushObject(constraint);
+    }
+  },
+
+  removeConstraint(constraint) {
+    const constraints = this.get('constraints');
+    constraints.removeObject(constraint);
+  },
+
+  containsConstraint(constraint) {
+    const constraints = this.get('constraints');
+    return constraints.indexOf(constraint) > -1;
+  },
+
+  addModifier(modifier) {
+    const modifiers = this.get('modifiers');
+    if (modifiers.indexOf(modifier) === -1) {
+      modifiers.pushObject(modifier);
+    }
+  }
 });

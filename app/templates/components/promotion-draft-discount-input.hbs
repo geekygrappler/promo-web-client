@@ -1,0 +1,14 @@
+<h2>What {{formattedType}} off the {{formattedTarget}} do you want to give customers?</h2>
+<div class="draft__form__input-group input-group input-group-lg">
+  {{#if absoluteDiscount}}
+    <span class="input-group-addon">£</span>
+  {{/if}}
+  {{input type="text" class="form-control" value=discountInput}}
+  {{#if percentageDiscount}}
+    <span class="input-group-addon">%</span>
+  {{/if}}
+  <!-- nasty hack to make computed property run and set value on model :-O -->
+  {{targetDiscount}}
+</div>
+{{#link-to nextLink class="btn btn-primary btn-large"}}Good To Go{{/link-to}}
+{{yield}}

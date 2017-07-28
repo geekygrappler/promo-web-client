@@ -1,0 +1,11 @@
+<h2>
+  What value do you want to set for the minimum basket total?
+</h2>
+<div class="draft__form__input-group input-group input-group-lg">
+    <span class="input-group-addon">£</span>
+    {{input type="text" class="form-control" value=model.minimumBasketTotal}}
+</div>
+<button {{action (route-action "addConstraint")}} class="btn btn-primary btn-large">Perfect</button>
+<button {{action (route-action "removeConstraint")}} class="btn btn-danger btn-large">Cancel</button>
+
+{{outlet}}

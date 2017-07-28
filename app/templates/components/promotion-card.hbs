@@ -31,13 +31,20 @@
         {{promotion.deliveryPercentageDiscount}}% off delivery
       </li>
     {{/if}}
+    {{#if promotion.totalPercentageDiscount}}
+      <li>
+        {{promotion.totalPercentageDiscount}}
+      </li>
+    {{/if}}
   </ul>
 
   <h4>Restrictions</h4>
-  {{#each promotion.constraints as |constraint|}}
-    {{!-- Need check type of constraint  --}}
-    Can only be redeemed once by a customer.
-  {{/each}}
+  <ul>
+    {{#each promotion.constraints as |constraint|}}
+      {{!-- Need check type of constraint  --}}
+      Can only be redeemed once by a customer.
+    {{/each}}
+  </ul>
 
   {{yield}}
 </div>

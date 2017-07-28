@@ -26,5 +26,6 @@ export default function() {
   */
 
   this.get('/promotions');
-  this.passthrough('promotions');
+  this.post('/promotions');
+  // this.passthrough('promotions', 'get');
 }
