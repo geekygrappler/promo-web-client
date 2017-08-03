@@ -28,4 +28,5 @@ export default function() {
   this.get('/promotions');
   this.post('/promotions');
   // this.passthrough('promotions', 'get');
+  this.passthrough('users/sign_in');
 }
