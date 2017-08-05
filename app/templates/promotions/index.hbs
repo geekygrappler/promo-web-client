@@ -1,11 +1,5 @@
 <h2>Promotions</h2>
 
-<div class="row">
-  {{#each model as |promotion|}}
-    <div class="col-sm-6 mb-4">
-      {{promotion-card promotion=promotion}}
-    </div>
-  {{/each}}
-</div>
+{{promotions-list promotions=model}}
 
 {{outlet}}
