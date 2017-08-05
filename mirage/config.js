@@ -29,5 +29,5 @@ export default function() {
   this.post('/promotions');
   this.passthrough('promotions', 'get');
   this.passthrough('users/sign_in');
-  this.passthrough('users.json');
+  this.passthrough('users');
 }
