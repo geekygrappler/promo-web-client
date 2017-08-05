@@ -1,0 +1,10 @@
+<h2>Some info about what this thing is</h2>
+
+{{#if session.isAuthenticated}}
+  Check out your promotions
+  {{#link-to 'promotions' class="btn btn-lg btn-primary"}}Promotions{{/link-to}}
+{{else}}
+  {{#link-to 'sign-up' class="btn btn-lg btn-primary"}}Sign up{{/link-to}}
+{{/if}}
+
+{{yield}}
