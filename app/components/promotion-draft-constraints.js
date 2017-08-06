@@ -32,6 +32,9 @@ export default Ember.Component.extend({
       } else {
         this.get('router').transitionTo('promotions.draft.constraints.minimum-basket-total');
       }
+    },
+    transition() {
+      this.attrs.transition();
     }
   }
 });
