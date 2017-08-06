@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   actions: {
     submit() {
       const form = this.get('form');
-      fetch(`${this.get('apiHost')}users`, {
+      fetch(`${this.get('apiHost')}/users`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'

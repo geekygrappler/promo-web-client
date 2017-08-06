@@ -68,5 +68,11 @@ export default Ember.Component.extend({
       return 'promotions.draft.constraints';
     }
     return 'promotions.draft.overview';
-  })
+  }),
+
+  actions: {
+    submit() {
+      this.attrs.transition(this.get('nextLink'));
+    }
+  }
 });
