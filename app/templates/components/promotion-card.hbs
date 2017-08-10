@@ -26,25 +26,36 @@
         {{promotion.itemsPercentageDiscount}}% off items
       </li>
     {{/if}}
+    {{#if promotion.itemsAbsoluteDiscount}}
+      £{{promotion.itemsAbsoluteDiscount}} off items
+    {{/if}}
     {{#if promotion.deliveryPercentageDiscount}}
       <li>
         {{promotion.deliveryPercentageDiscount}}% off delivery
       </li>
     {{/if}}
+    {{#if promotion.deliveryAbsoluteDiscount}}
+      <li>
+        £{{promotion.deliveryAbsoluteDiscount}} off delivery
+      </li>
+    {{/if}}
     {{#if promotion.totalPercentageDiscount}}
       <li>
-        {{promotion.totalPercentageDiscount}}
+        {{promotion.totalPercentageDiscount}}% off total basket
+      </li>
+    {{/if}}
+    {{#if promotion.totalAbsoluteDiscount}}
+      <li>
+        £{{promotion.totalAbsoluteDiscount}} off total basket
       </li>
     {{/if}}
   </ul>
 
   <h4>Restrictions</h4>
-  <ul>
-    {{#each promotion.constraints as |constraint|}}
-      {{!-- Need check type of constraint  --}}
-      Can only be redeemed once by a customer.
-    {{/each}}
-  </ul>
+  {{constraints-list-display 
+    constraints=promotion.constraints 
+    minimumBasketTotal=promotion.minimumBasketTotal
+  }}
 
   {{yield}}
 </div>

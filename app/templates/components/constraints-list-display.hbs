@@ -1,0 +1,12 @@
+<ul>
+  {{#each constraintsWithoutTimePeriodConstraint as |constraint|}}
+    <li>
+      {{constraint-display 
+        constraint=constraint 
+        minimumBasketTotal=minimumBasketTotal
+      }}
+    </li> 
+  {{/each}} 
+</ul> 
+
+{{yield}} 
