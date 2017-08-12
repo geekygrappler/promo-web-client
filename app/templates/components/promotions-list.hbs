@@ -3,7 +3,7 @@
 {{/if}}
 {{#link-to 'promotions.draft.name' class="btn btn-lg btn-success"}}Create Promotions{{/link-to}}
 <div class="row">
-  {{#each model as |promotion|}}
+  {{#each promotions as |promotion|}}
     <div class="col-sm-6 mb-4">
       {{promotion-card promotion=promotion}}
     </div>
