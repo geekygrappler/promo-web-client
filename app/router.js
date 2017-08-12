@@ -37,6 +37,7 @@ Router.map(function() {
       });
       this.route('overview');
     });
+    this.route('show', { path: ':id' });
   });
 });
 
