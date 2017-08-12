@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 
 
 export default Component.extend({
-  constraintsWithoutTimePeriodConstraint: computed('constraints', function() {
+  constraintsWithoutPromotionPeriodConstraint: computed('constraints', function() {
     return this.get('constraints').filter((constraint) => constraint !== 'TimePeriodConstraint');
   })
 });
