@@ -5,7 +5,13 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   actions: {
     savePromotion(promotion) {
-      promotion.save();
+      promotion.save()
+      .then((persistedPromotion) => {
+        this.transitionTo('promotions.show', persistedPromotion);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     }
   }
 });
