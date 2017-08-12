@@ -63,7 +63,7 @@ export default Ember.Component.extend({
    * @return string path for link-to helper
    */
   nextLink: computed('promotion.modifiers', 'promotion.constraints', function() {
-    if(this.get('promotion.modifiers').length == 1 && this.get('promotion.constraints').length == 1) {
+    if(this.get('promotion.modifiers').length == 1) {
       return 'promotions.draft.constraints';
     }
     return 'promotions.draft.overview';
