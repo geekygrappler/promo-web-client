@@ -1,3 +1,8 @@
-{{promotion-card promotion=model}}
+{{#promotion-card promotion=model}}
+  {{promocode-generator 
+    requireEmail=model.hasSpecificCustomerConstraint
+    promotionId=model.id
+  }}
+{{/promotion-card}}
 
 {{outlet}}

@@ -5,7 +5,9 @@
 <div class="row">
   {{#each promotions as |promotion|}}
     <div class="col-sm-6 mb-4">
-      {{promotion-card promotion=promotion}}
+      {{#promotion-card promotion=promotion}}
+        {{#link-to "promotions.show" promotion class="btn btn-lg btn-primary"}}Edit Promotion{{/link-to}}
+      {{/promotion-card}}
     </div>
   {{/each}}
 </div>

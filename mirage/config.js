@@ -31,4 +31,5 @@ export default function() {
   this.passthrough('promotions/:id', 'get');
   this.passthrough('users/sign_in');
   this.passthrough('users');
+  this.passthrough('api/v1/promocodes/generate');
 }

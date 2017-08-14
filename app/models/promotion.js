@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
 const { attr } = DS;
 
 export default DS.Model.extend({
@@ -18,6 +19,10 @@ export default DS.Model.extend({
 
   constraints: attr('', { defaultValue: () => [] }),
   modifiers: attr('', { defaultValue: () => [] }),
+
+  hasSpecificCustomerConstraint: computed('constraints.[]', function() {
+    return this.containsConstraint('SpecificCustomerConstraint');
+  }),
 
 
   addConstraint(constraint) {
