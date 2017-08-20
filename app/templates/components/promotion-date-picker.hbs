@@ -1,0 +1,22 @@
+<form {{action (route-action "transition") on="submit"}}>
+  <div class="draft__form__input-group input-group input-group-lg">
+    <span class="input-group-addon">
+      Start Date:   
+    </span>
+    {{pikaday-input onSelection=(action "setDate" "startDate")}}
+    {{!-- {{input type="text" class="form-control" value=model.startDate}} --}}
+  </div>
+  <span class="draft__form__small-text text-left">Leaves this blank for an immediate start date.</span>
+  <div class="draft__form__input-group input-group input-group-lg">
+    <span class="input-group-addon">
+      End Date:
+    </span>
+    {{pikaday-input onSelection=(action "setDate" "endDate")}}
+
+    {{!-- {{input type="text" class="form-control" value=model.endDate}} --}}
+  </div>
+  <span class="draft__form__small-text text-left">Leaves this blank for no end date.</span>
+  <button type="submit" class="btn btn-primary btn-large">Good to go</button>
+</form>
+
+{{yield}}
