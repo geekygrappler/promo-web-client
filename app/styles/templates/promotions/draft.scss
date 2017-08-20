@@ -1,3 +1,9 @@
+
+/* TODO work out why css-modules isn't namespacing template classes */
+:global(.draft-container) {
+  margin-top: -54px;
+}
+
 :global(.draft__form__small-text) {
   display: block;
   font-size: smaller;
