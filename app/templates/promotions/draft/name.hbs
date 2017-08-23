@@ -1,11 +1,15 @@
 <h2>
-  What do you want to call your promotoin?
+  Private name for your promotion?
 </h2>
 <small>This name will help you identify your promotions. It won't be seen by customers.</small>
 <form {{action (route-action "transition") on="submit"}}>
   <div class="draft__form__input-group input-group">
-    {{!--TODO make enter transition this (either make a form or have action onEnter) --}}
-    {{input type="text" value=model.name class="form-control"}}
+    {{input 
+      type="text" 
+      value=model.name 
+      class="form-control"
+      placeholder="Internal name for your promotion e.g. Summer Sale 2017"
+    }}
   </div>
   <button type="submit" class="btn btn-primary btn-large">I like it</button>
 </form>

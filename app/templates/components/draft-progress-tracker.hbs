@@ -1,0 +1,47 @@
+<ol class="nav justify-content-center">
+  <li class="nav-item">
+    {{#link-to 
+      "promotions.draft.name"
+      class="nav-link"
+    }}
+      Name
+    {{/link-to}}
+  </li>
+  <span class="next-arrow">&rarr;</span>
+  <li class="nav-item">
+    {{#link-to
+      "promotions.draft.dates"
+      class="nav-link"
+    }}
+      Dates
+    {{/link-to}}
+  </li>
+  <span class="next-arrow">&rarr;</span>
+  <li class="nav-item">
+    {{#link-to
+      "promotions.draft.modifiers.targets"
+      class="nav-link"
+    }}
+      Discounts
+    {{/link-to}}
+  </li>
+  <span class="next-arrow">&rarr;</span>
+  <li class="nav-item">
+    {{#link-to
+      "promotions.draft.constraints"
+      class="nav-link"
+    }}
+      Rules
+    {{/link-to}}
+  </li>
+  <span class="next-arrow">&rarr;</span>
+  <li class="nav-item">
+    {{#link-to
+      "promotions.draft.overview"
+      class="nav-link"
+    }}
+      Overview
+    {{/link-to}}
+  </li>
+</ol>
+{{yield}}
