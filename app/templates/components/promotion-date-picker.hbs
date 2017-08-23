@@ -11,12 +11,14 @@
     <span class="input-group-addon">
       End Date:
     </span>
-    {{pikaday-input onSelection=(action "setDate" "endDate")}}
+    {{pikaday-input class="" onSelection=(action "setDate" "endDate")}}
 
     {{!-- {{input type="text" class="form-control" value=model.endDate}} --}}
   </div>
   <span class="draft__form__small-text text-left">Leaves this blank for no end date.</span>
-  <button type="submit" class="btn btn-primary btn-large">Good to go</button>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-large">Good to go</button>
+  </div>
 </form>
 
 {{yield}}
