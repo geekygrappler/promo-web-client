@@ -7,8 +7,8 @@ export default Ember.Component.extend({
     return (
       {
         'MinimumBasketTotalConstraint': `The customer's basket must be at least £${minimumBasketTotal}.`,
-        'OnePerCustomerConstraint': 'A customer can only have one promocode for this promotion.',
-        'SpecificCustomerConstraint': 'A promocode belongs to the customer.'
+        'OnePerCustomerConstraint': 'A customer can only use a promocode for this promotion once',
+        'SpecificCustomerConstraint': 'A promocode is linked to a customer (via email) and can only be redeemed by them.'
       }
     );
   }),
