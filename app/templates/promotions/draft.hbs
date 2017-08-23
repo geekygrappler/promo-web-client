@@ -1,8 +1,10 @@
 <div 
   class="draft-container d-flex flex-column align-items-center justify-content-center vh-100"
 >
-  {{draft-progress-tracker}}
-  <div>
-    {{outlet}}
+  <div class="draft-wrapper">
+    {{draft-progress-tracker}}
+    <div class="draft-route-container">
+      {{outlet}}
+    </div>
   </div>
 </div>

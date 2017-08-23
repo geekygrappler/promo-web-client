@@ -1,6 +1,11 @@
 
 .draft-container {
-  margin-top: -54px;
+  .draft-wrapper {
+    margin-top: -60px;
+  }
+  .draft-route-container {
+    min-height: 50vh;
+  }
   h2 {
     text-align: center;
   }
