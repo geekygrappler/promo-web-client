@@ -1,4 +1,11 @@
-{{#bs-navbar fluid=false collapsed=true onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+{{#bs-navbar 
+  fluid=false 
+  collapsed=true 
+  onCollapse=(action (mut collapsed) true) 
+  onExpand=(action (mut collapsed) false) 
+  class="main-navbar mb-4"
+  as |navbar|
+}}
   <div class="navbar-header">
   {{navbar.toggle align="right"}}
   {{#link-to "index" class="navbar-brand"}}Promos{{/link-to}}

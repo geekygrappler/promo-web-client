@@ -1,0 +1,16 @@
+.main-navbar {
+  .navbar-header {
+    width: 100vw;
+    .navbar-toggler {
+      margin-right: 1rem; 
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    .navbar-header {
+      width: auto;
+      .navbar-toggler {
+        margin-right: 0;
+      }
+    }
+  }
+}
