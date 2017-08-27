@@ -1,8 +1,12 @@
 
 @import "ember-bootstrap/bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500i');
+
 @import "templates/promotions/draft";
 @import "components/draft-progress-tracker";
 @import "components/main-navbar";
+
 
 .vh-100 {
   height: 100vh;

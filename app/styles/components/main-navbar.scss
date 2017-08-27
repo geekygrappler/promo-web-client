@@ -1,4 +1,9 @@
 .main-navbar {
+  .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
   .navbar-header {
     width: 100vw;
     .navbar-toggler {
