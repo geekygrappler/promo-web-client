@@ -8,11 +8,11 @@
 }}
   <div class="navbar-header">
   {{navbar.toggle align="right"}}
-  {{#link-to "index" class="navbar-brand"}}Promos{{/link-to}}
+  {{#link-to "index" class="navbar-brand"}}Promo Service{{/link-to}}
   </div>
   {{#navbar.content}}
      {{#navbar.nav as |nav|}}
-      {{#nav.item}}{{#nav.link-to "index"}}Home{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}{{#nav.link-to "how-it-works"}}How it works{{/nav.link-to}}{{/nav.item}}
       {{#if session.isAuthenticated}}
         {{#nav.item}}{{#nav.link-to "promotions"}}Promotions{{/nav.link-to}}{{/nav.item}}
       {{/if}}

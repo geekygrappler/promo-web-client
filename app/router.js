@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('sign-up');
+  this.route('how-it-works');
 
   this.route('promotions', function() {
     this.route('draft', function() {
