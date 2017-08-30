@@ -12,6 +12,10 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       .catch((error) => {
         console.log(error);
       });
+    },
+    deletePromotion(promotion) {
+      promotion.destroyRecord()
+      .then(() => this.transitionTo('promotions.index'));
     }
   }
 });

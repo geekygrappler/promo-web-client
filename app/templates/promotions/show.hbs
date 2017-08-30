@@ -1,8 +1,16 @@
 {{#promotion-card promotion=model}}
-  {{promocode-generator 
-    requireEmail=model.hasSpecificCustomerConstraint
-    promotionId=model.id
-  }}
+  <div class="promotion-card__action-buttons">
+    {{promocode-generator 
+      requireEmail=model.hasSpecificCustomerConstraint
+      promotionId=model.id
+    }}
+    <button 
+      onclick={{action (route-action "deletePromotion" model)}}
+      class="btn btn-danger"
+    >
+      Delete this Promotion
+    </button>
+  </div>
 {{/promotion-card}}
 
 {{outlet}}
